@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Lotus Booking</title>
+  <style>
+	  header {
+  background-color: rgb(0, 128, 255);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+	
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.banner {
+  background-color: rgb(250, 200, 173);
+  color: #fff;
+  text-align: center;
+  padding-top: 150px ;
+  height: 200px;
+}
+
+.banner h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+footer {
+  background-color: rgb(128, 128, 128);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  background-color: rgb(255, 255, 255);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+/* Styles for booking form */
+form {
+  margin-top: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+input[type="date"],
+input[type="number"],
+button[type="submit"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width:100px;
+   text-align: center;
+}
+footer {
+  background-color: rgb(128, 128, 128);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+.City{
+	width:83%;
+	height:45%;
+	padding-bottom: 20px;
+}
+#bookingForm{
+	width:870px;
+	border-radius: 5px;
+	
+}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+		<h2>Welcome to Golden Lotus Hotel</h2>
+      <ul>
+        <li><a href="GoldenLotus.html">Home</a></li>
+        <li><a href="GoldenLotusRoom.html">Rooms</a></li>
+        <li><a href="GoldenLotusBooking.html">Bookings</a></li>
+        <li><a href="GoldenLotusContact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="banner">
+    
+    <button id="bookNowButton">Book Now</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Awesome Hotel. All rights reserved.</p>
+  </footer>
+
+  <div id="bookingModal" class="modal" style="width:1400px;height:600px;">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 style="text-align: center; color:rgb(0, 128, 128);background-color: cornsilk;"><u>Book Your Stay</u></h2>
+      <form id="bookingForm">
+        <label for="checkInDate">Check-In Date:</label>
+        <input type="date" id="checkInDate" required><br>
+        <label for="checkOutDate">Check-Out Date:</label>
+        <input type="date" id="checkOutDate" required><br>
+        <label for="guests">Number of Guests:</label>
+        <input type="number" id="guests" required><br>
+        <label for="city" required>City:</label>
+        <select class="City" required>
+			<option>----select----</option>
+			<option>Banglore</option>
+			<option>Hyderabad</option>
+			<option>Chennai</option>
+			<option>Mumbai</option>
+			<option>Delhi</option>
+			<option>Pune</option>
+			<option>Rajamundry</option>
+		</select>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  <script>
+	  
+
+document.addEventListener("DOMContentLoaded", function() {
+  var modal = document.getElementById("bookingModal");
+  var btn = document.getElementById("bookNowButton");
+  var span = document.getElementsByClassName("close")[0];
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  var bookingForm = document.getElementById("bookingForm");
+  bookingForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    var checkInDate = document.getElementById("checkInDate").value;
+    var checkOutDate = document.getElementById("checkOutDate").value;
+    var guests = document.getElementById("guests").value;
+    alert("Booking confirmed!\nHotel Name: Golden Lotus Hotel\n Check-In Date: " + checkInDate + "\nCheck-Out Date: " + checkOutDate + "\nNumber of Guests: " + guests+"\n Booked City:"+City);
+    modal.style.display = "none";
+  });
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Form</title>
+  <style>
+body {
+  font-family:Times New Roman;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#message {
+  text-align: center;
+  margin-top: 20px;
+  color: #007bff;
+}
+    
+	header {
+  background-color: rgb(255, 128, 192);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+footer {
+  background-color: rgb(128, 128, 128);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+	  
+  </style>
+</head>
+<body>
+<header>
+    <h1>Welcome to Hotel Management System</h1>
+    <nav>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Create.html">SignUp</a></li>
+        <li><a href="Loginn.html">Login</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="HotelDetailss.html">Hotel Details</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <form id="signup-form">
+      <h2 style="background-color: rgb(0, 255, 0);">Signup</h2>
+      <div class="form-group">
+        <label for="fname">Firstname:</label>
+        <input type="text" id="fname" name="fname" placeholder="Enter Your First Name" required>
+      </div>
+      <div class="form-group">
+        <label for="lname">Lastname:</label>
+        <input type="text" id="lname" name="lname" placeholder="Enter your Last Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter EmailId" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter Your Password" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Confirm Password:</label>
+        <input type="password" id="cpassword" name="cpassword" placeholder="Enter your Confirm Password" required>
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p id="message"></p>
+  </div>
+  <footer>
+    <p>&copy; 2024 Awesome Hotel. All rights reserved.</p>
+  </footer>
+
+  <script>
+	  
+document.getElementById("signup-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  var Firstname = document.getElementById("fname").value;
+   var Lastname = document.getElementById("lname").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var cpassword = document.getElementById("cpassword").value;
+
+  // You can perform validation here before submitting the form
+  // For simplicity, let's just display a message
+  var message = "Firstame: " + Firstname + "<br> Lastname: "+Lastname + "<br>Email: " + email;
+  document.getElementById("your account successfully created").innerHTML = message;
+});
+  </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+	  body {
+  font-family:Times New Roman;
+  background-color: rgb(255, 255, 255);
+  border:1px;
+  border-color: rebeccapurple;
+}
+.container {
+  max-width: 400px;
+  margin: 12px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+  text-align: center;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+header {
+  background-color: rgb(255, 128, 192);
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+nav ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}	 
+footer {
+  background-color: rgb(128, 128, 128);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+} 
+  </style>
+</head>
+<body>
+	<header>
+    <h1>Welcome to Hotel Management System</h1>
+    <nav>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Create.html">SignUp</a></li>
+        <li><a href="Login.html">Login</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="HotelDetailss.html">Hotel Details</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="login-container" style="text-align: center;">
+    <h2>Login</h2>
+    <form class="form">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter Your Username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter Your Password" required>
+      </div>
+      <input type="submit" id="submit" name="submit"><br>
+    </form>
+  </div>
+  <footer>
+    <p>&copy; 2024 Awesome Hotel. All rights reserved.</p>
+  </footer>
+ <script>	 
+document.getElementById('login-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+  
+  // Check credentials (Dummy check for demonstration)
+  if (username === 'admin' && password === 'password') {
+    // Redirect to dashboard or perform other actions
+    alert('Login successful!');
+  } else {
+    // Show error message
+    document.getElementById('error-message').textContent = 'Invalid username or password';
+  }
+}); 
+  </script>
+</body>
+</html>

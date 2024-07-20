@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+		body{
+			font-family: 'Times New Roman';
+			border-color:#04AA6D;
+			border-radius:20px;
+			padding-top:10px;
+			margin:auto;
+			background-color: rgb(255, 255, 255);
+		}
+		form {
+  border: 3px solid #f1f1f1;
+  text-align: center;
+}
+
+input[type=text], input[type=password] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 15px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+}
+
+button:hover {
+  background-color: rgb(64, 128, 128);
+}
+
+.container { 
+  padding: 20px 50px;
+  text-align: center;
+  flex-basis: 31%;
+  background-color: rgb(170, 199, 215);
+  border-radius: 5px;
+  margin-bottom: 5%;
+  box-sizing: border-box;
+  transition: 0.5s;
+   max-width: 500px;
+   max-height: 400px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  padding-top: 40px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+} 
+	header {
+  background-color: rgb(255, 128, 192);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+footer {
+  background-color: rgb(128, 128, 128);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+</style>
+</head>
+<body>
+	
+<header>
+    <h1>Welcome to Hotel Management System</h1>
+    <nav>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Create.html">SignUp</a></li>
+        <li><a href="Loginn.html">Login</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="HotelDetailss.html">Hotel Details</a></li>
+      </ul>
+    </nav>
+  </header>
+	<form>
+  <div class="container">
+    
+    <h2><u><b>Login</b></u></h2>
+   <b>Username:</b><input type="text" placeholder="Enter Username" name="uname" required><br>
+
+   <b>Password:</b><input type="password" placeholder="Enter Password" name="psw" required><br>
+
+    <button type="submit">Login</button>
+  </div>
+</form>
+<footer>
+    <p>&copy; 2024 Awesome Hotel. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>TajRoomDetails</title>
+<style>
+	  header {
+  background-color: rgb(95, 183, 192);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+		}
+
+		nav ul {
+  list-style: none;
+  padding: 0;
+		}
+
+		nav ul li {
+  display: inline;
+  margin-right: 20px;
+		}
+
+		nav ul li a {
+	
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+		}
+
+/* Styles for features section */
+		.features {
+  padding: 20px;
+		}
+
+		.feature {
+  text-align: center;
+  margin-bottom: 20px;
+		}
+
+/* Styles for footer */
+		footer {
+  background-color: rgb(128, 128, 128);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+		}
+		input{
+	width:100px;
+	height:20px;
+	background-color: rgb(255, 128, 64);
+		}
+		</style>
+	</head>
+<body style="background-color: mistyrose; text-align: center;">
+
+		<header>
+    <nav>
+		<h2>Welcome to Taj Hotel</h2>
+      <ul>
+        <li><a href="TajHotel.html">Home</a></li>
+        <li><a href="TajRoom.html">Rooms</a></li>
+        <li><a href="TajBooking.html">Bookings</a></li>
+        <li><a href="TajHotelContact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<table style="text-align: center;">
+	<tr>
+	<td>
+<h3>RoomType</h3></td>
+<td>
+<select id="roomtype">
+	<option>---select---</option>
+	<option>Suite Room</option>
+	<option >Deluxe Room</option>
+	<option>Twin Room</option>
+	<option >Luxury Room</option>
+</select></td></tr> <br>
+
+<tr><td>
+<h3>Room Amentities</h3></td>
+<td>
+	<input type="checkbox" id="chk">Shower
+	<input type="checkbox" id="chk">Conceierge
+	<input type="checkbox" id="chk">Safe
+	<input type="checkbox" id="chk">24/7 Service
+	<input type="checkbox" id="chk">Luggage</td>
+	</tr><br>
+<tr><td><h3>Special Rooms</h3></td>
+<td>
+<select >
+	<option>---select---</option>
+	<option>Female</option>
+	<option>Male</option>
+</select></td></tr><br>
+
+<tr><td><h3>Budget</h3></td>
+<td><select id="budget">
+	<option>---select---</option>
+	<option>1000</option>
+	<option>1500</option>
+	<option>2000</option>
+	<option>2500</option>
+	<option>3000</option>
+</select></td></tr><br>
+<tr><td>
+<p>Check the availabilty here</p></td>
+<td><input type="button" value="check"></td>
+</tr>
+</table>
+<footer>
+    <p>&copy; 2024 Awesome Hotel. All rights reserved.</p>
+  </footer>
+<script>
+    var roomtype = document.getElementById("roomtype").value;
+    var roomamentities = document.getElementById("chk").value;
+    var budget = document.getElementById("budget").value;
+    alert("Booking Rooms available");
+</script>
+</body>
+</html>
